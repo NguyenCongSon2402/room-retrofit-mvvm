@@ -17,8 +17,8 @@ class HomeViewModel(private val apiRepo: ApiRepo, private val db: CharacterDatab
     private val _stateListCharacter = MutableLiveData<Resource<DataResult>>()
     val stateListCharacter: LiveData<Resource<DataResult>> = _stateListCharacter
 
-    private var _listState = MutableLiveData<List<String>>()
-    val listState: LiveData<List<String>> = _listState
+    private var _listState = MutableLiveData<List<Character>>()
+    val listState: LiveData<List<Character>> = _listState
 
     fun getAllCharacter(page: Int){
         viewModelScope.launch {

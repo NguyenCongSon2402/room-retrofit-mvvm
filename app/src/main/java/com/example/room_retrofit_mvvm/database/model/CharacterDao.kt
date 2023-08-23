@@ -14,6 +14,6 @@ interface CharacterDao {
     suspend fun updateItem(character: Character)
 
     @Query("SELECT * FROM table_character_1")
-    suspend fun getAllData(): List<String>
+     fun getAllData(): List<Character>
 
 }
